@@ -22,7 +22,7 @@ export default function ToastContainer() {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-start items-center min-h-screen md:justify-center">
       <div className="fixed top-2 right-2">
         {toasts.map(({ id, message, type }) => {
           return (
@@ -52,7 +52,7 @@ export default function ToastContainer() {
         })}
       </div>
 
-      <div className="">
+      <div className="flex flex-col md:flex-row">
         <button
           className="cursor-pointer bg-green-400 m-2 rounded-md p-2"
           onClick={() => handleAdd("Success", "success")}
